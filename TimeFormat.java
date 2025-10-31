@@ -9,9 +9,11 @@ public class TimeFormat {
         int num2 = Integer.parseInt(minutes);
        // System.out.println("num1 is: "+num1+" num2 is "+num2);
         boolean ampm = true;
-
-        if (num1 == 00)
+        if ( num1 == 12)
+            ampm = false;
+        if (num1 == 00)  {
             num1 = 12;
+        }
          if(num1<10)
         {
             System.out.print("0");
@@ -31,9 +33,10 @@ public class TimeFormat {
         else    
             System.out.print(num2);
         //System.out.println(num1+":"+num2);
+            
         if (ampm)
             System.out.print(" AM");
-        else
+        if (ampm == false)
             System.out.print(" PM");
     }
     }
