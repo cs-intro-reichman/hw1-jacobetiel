@@ -1,17 +1,39 @@
-// Represents the hh:mm time format using an AM/PM format. 
 public class TimeFormat {
-	public static void main(String[] args) {
-		// In Java, the command-line arguments args[0], args[1], ... are represented
-		// each by a string. In this program, the single "hh:mm" input is represented
-		// by the single command-line string argument args[0]. 
-		//   
-		// The following statement handles the hours part of the input.
-		// It concatenates the empty string "" with the leftmost hour-digit. 
-		// It then concatenates the resulting string with the rightmost hour-digit,
-		// and then uses parseInt to cast the resulting string as an int.
-		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
-		// Does the same with the minutes part of the input.
-		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
-	}
-}
+    public static void main(String[] args) {
+        String time = args[0];
+        
+        String hours = time.substring(0,2);
+        String minutes = time.substring (3);
+       // System.out.println("the time is "+ time+ " hours is " + hours + " minutes is " + minutes);
+        int num1 = Integer.parseInt(hours);
+        int num2 = Integer.parseInt(minutes);
+       // System.out.println("num1 is: "+num1+" num2 is "+num2);
+        boolean ampm = true;
+
+        if (num1 == 00)
+            num1 = 12;
+         if(num1<10)
+        {
+            System.out.print("0");
+        }
+        
+        
+        if (num1 > 12)
+            {   
+            ampm = false;
+            num1 = num1 -12;
+            if(num1<10)
+                System.out.print("0");
+            }
+        System.out.print(num1+":");
+        if(num2<10)
+            System.out.print("0"+num2);
+        else    
+            System.out.print(num2);
+        //System.out.println(num1+":"+num2);
+        if (ampm)
+            System.out.print(" AM");
+        else
+            System.out.print(" PM");
+    }
+    }
