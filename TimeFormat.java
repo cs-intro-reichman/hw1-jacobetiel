@@ -11,7 +11,7 @@ public class TimeFormat {
         if ( num1 == 12)
             ampm = false;
 
-         if(num1<10)
+         if(num1<10 && num1!=00)
         {
             System.out.print("0");
         }
