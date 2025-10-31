@@ -11,14 +11,13 @@ public class TimeFormat {
         boolean ampm = true;
         if ( num1 == 12)
             ampm = false;
-        if (num1 == 00)  {
-            num1 = 12;
-        }
+        //if (num1 == 00)  {
+        //    num1 = 12;
+        //}
          if(num1<10)
         {
             System.out.print("0");
         }
-        
         
         if (num1 > 12)
             {   
