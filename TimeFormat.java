@@ -4,16 +4,13 @@ public class TimeFormat {
         
         String hours = time.substring(0,2);
         String minutes = time.substring (3);
-       // System.out.println("the time is "+ time+ " hours is " + hours + " minutes is " + minutes);
         int num1 = Integer.parseInt(hours);
         int num2 = Integer.parseInt(minutes);
-       // System.out.println("num1 is: "+num1+" num2 is "+num2);
+
         boolean ampm = true;
         if ( num1 == 12)
             ampm = false;
-        //if (num1 == 00)  {
-        //    num1 = 12;
-        //}
+
          if(num1<10)
         {
             System.out.print("0");
